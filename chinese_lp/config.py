@@ -23,10 +23,11 @@ rnn_cells_num = 128
 
 # Licens plate patterns
 lpr_patterns = [
-  '^<[^>]*>[A-Z][0-9A-Z]{5}$',
-  '^<[^>]*>[A-Z][0-9A-Z][0-9]{3}<police>$',
-  '^<[^>]*>[A-Z][0-9A-Z]{4}<[^>]*>$',  # <Guangdong>, <Hebei>
-  '^WJ<[^>]*>[0-9]{4}[0-9A-Z]$',
+  '^[A-Z]{1,2}[0-9]{1,4}[A-Z]{1,3}$',
+  #'^<[^>]*>[A-Z][0-9A-Z]{5}$',
+  #'^<[^>]*>[A-Z][0-9A-Z][0-9]{3}<police>$',
+  #'^<[^>]*>[A-Z][0-9A-Z]{4}<[^>]*>$',  # <Guangdong>, <Hebei>
+  #'^WJ<[^>]*>[0-9]{4}[0-9A-Z]$',
 ]
 
 # Path to the folder where all training and evaluation artifacts will be located
