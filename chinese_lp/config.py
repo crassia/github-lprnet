@@ -49,9 +49,9 @@ class train:
   save_checkpoints_steps = 1000      # Number of training steps when checkpoint should be saved
   display_iter = 100
 
-  apply_basic_aug = False
+  apply_basic_aug = True
   apply_stn_aug = True
-  apply_blur_aug = False
+  apply_blur_aug = True
 
   need_to_save_weights = True
   need_to_save_log = True
