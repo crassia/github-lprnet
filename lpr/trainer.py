@@ -77,9 +77,9 @@ def augment(images):
   augmented = tf.image.random_contrast(augmented, lower=0.8, upper=1.2)
   #--------------- kelvin's augment
   #augmented = tf.image.random_jpeg_quality(augmented, 75, 95)
-  random_angles = tf.random.uniform(shape = (tf.shape(images)[0], ), minval = -np.pi / 4, maxval = np.pi / 4)
-  augmented = tf.contrib.image.transform(augmented,
-    tf.contrib.image.angles_to_projective_transforms(random_angles, tf.cast(tf.shape(images)[1], tf.float32), tf.cast(tf.shape(images)[2], tf.float32)))
+  #random_angles = tf.random.uniform(shape = (tf.shape(images)[0], ), minval = -np.pi / 4, maxval = np.pi / 4)
+  #augmented = tf.contrib.image.transform(augmented,
+  #  tf.contrib.image.angles_to_projective_transforms(random_angles, tf.cast(tf.shape(images)[1], tf.float32), tf.cast(tf.shape(images)[2], tf.float32)))
   #----------------
   augmented = tf.add(augmented, tf.truncated_normal(tf.shape(augmented), stddev=0.02))
   return augmented
